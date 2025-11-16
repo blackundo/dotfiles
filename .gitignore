@@ -1,0 +1,11 @@
+.log
+.DS_Store
+*/.DS_Store
+.config/**/.DS_Store
+
+dev_*.lua
+data
+ollama/
+qutebrowser/.qutebrowser/bookmarks/
+qutebrowser/.qutebrowser/quickmarks/
+qutebrowser/.qutebrowser/.config.py.swp
