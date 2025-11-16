@@ -1,8 +1,14 @@
 theme = coolnight
 font-family = MesloLGS NF
-font-size = 18
+font-size = 20
 
 background-opacity = 0.71
 background-blur = true
-background-blur-radius = 20
+background-blur-radius = 10
+
+# macos-titlebar-proxy-icon = hidden
+# macos-titlebar-style = hidden
+title = ""
+cursor-opacity = 0.90 
+
 command = /bin/zsh -l
