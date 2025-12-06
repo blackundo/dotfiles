@@ -1,24 +1,27 @@
-# Enable Powerlevel10k instant prompt. KHÔNG di chuyển dòng này.
+# Enable Powerlevel10k instant prompt. KHÔNG di chuyển!
 if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-# PATH (di chuyển lên trước)
+# PATH của bạn
 export PATH=$PATH:/Users/blackundo/.npm-packages/bin
 
-# Path to your oh-my-zsh installation.
+# Oh My Zsh config
 export ZSH="$HOME/.oh-my-zsh"
-
-# Set name of the theme to load --- Powerlevel10k
 ZSH_THEME="powerlevel10k/powerlevel10k"
 
-# Plugins
-plugins=(git)
+# Plugins: git + 2 plugin của bạn
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
+# Load Oh My Zsh
 source $ZSH/oh-my-zsh.sh
 
-# Powerlevel10k theme config
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# Khởi tạo completion (bắt buộc cho autosuggest)
+autoload -Uz compinit && compinit
 
-# User aliases/config (tùy chọn)
-# alias zshconfig="code ~/.zshrc"
+# Powerlevel10k theme
+[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
