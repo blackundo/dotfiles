@@ -12,3 +12,7 @@ title = ""
 cursor-opacity = 0.90 
 
 command = /bin/zsh -l
+
+
+keybind = shift+enter=text:\n
+term = xterm-256color
